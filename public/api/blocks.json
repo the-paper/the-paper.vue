@@ -1,0 +1,9 @@
+[
+  { "name": "#4371", "type": "12 * 18", "width": 304, "height": 457 },
+  { "name": "#4369", "type": "9 * 12", "width": 228, "height": 304 },
+  { "name": "#4368", "type": "8 * 10", "width": 203, "height": 254 },
+  { "name": "#4367", "type": "6 * 8", "width": 152, "height": 203 },
+  { "name": "#4366", "type": "5 * 7", "width": 127, "height": 177 },
+  { "name": "#4365", "type": "4 * 6", "width": 101, "height": 152 },
+  { "name": "#4364", "type": "3 * 4", "width": 76, "height": 101 }
+]

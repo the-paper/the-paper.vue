@@ -1,7 +1,7 @@
 <script setup>
 import { reactive, watch } from 'vue';
 import { useDebounceFn } from '@vueuse/core';
-import InputNumber from './InputNumber.vue';
+import InputNumber from './InputNumberGroup.vue';
 
 const paper = reactive({
   width: 0,
@@ -80,6 +80,7 @@ const adjustMarginBottom = useDebounceFn((bottom) => {
           <InputNumber
             id="paperWidth"
             label="width"
+            addon="W"
             :value="paper.width"
             @input-value="adjustPaperWidth"
           />
@@ -88,6 +89,7 @@ const adjustMarginBottom = useDebounceFn((bottom) => {
           <InputNumber
             id="paperHeight"
             label="height"
+            addon="H"
             :value="paper.height"
             @input-value="adjustPaperHeight"
           />
@@ -103,6 +105,7 @@ const adjustMarginBottom = useDebounceFn((bottom) => {
           <InputNumber
             id="blockWidth"
             label="width"
+            addon="W"
             :value="block.width"
             @input-value="adjustBlockWidth"
           />
@@ -111,6 +114,7 @@ const adjustMarginBottom = useDebounceFn((bottom) => {
           <InputNumber
             id="blockHeight"
             label="height"
+            addon="H"
             :value="block.height"
             @input-value="adjustBlockHeight"
           />
@@ -126,6 +130,7 @@ const adjustMarginBottom = useDebounceFn((bottom) => {
           <InputNumber
             id="marginTop"
             label="top"
+            addon="T"
             :value="margin.top"
             @input-value="adjustMarginTop"
           />
@@ -136,6 +141,7 @@ const adjustMarginBottom = useDebounceFn((bottom) => {
           <InputNumber
             id="marginLeft"
             label="left"
+            addon="L"
             :value="margin.left"
             @input-value="adjustMarginLeft"
           />
@@ -144,6 +150,7 @@ const adjustMarginBottom = useDebounceFn((bottom) => {
           <InputNumber
             id="marginRight"
             label="right"
+            addon="R"
             :value="margin.right"
             @input-value="adjustMarginRight"
           />
@@ -154,6 +161,7 @@ const adjustMarginBottom = useDebounceFn((bottom) => {
           <InputNumber
             id="marginBottom"
             label="bottom"
+            addon="B"
             :value="margin.bottom"
             @input-value="adjustMarginBottom"
           />

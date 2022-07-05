@@ -1,7 +1,7 @@
 <script setup>
 import { reactive, watch } from 'vue';
 import { useDebounceFn } from '@vueuse/core';
-import InputNumber from './InputNumberGroup.vue';
+import InputNumber from './InputNumberFloat.vue';
 
 const paper = reactive({
   width: 0,
@@ -80,7 +80,6 @@ const adjustMarginBottom = useDebounceFn((bottom) => {
           <InputNumber
             id="paperWidth"
             label="width"
-            addon="W"
             :value="paper.width"
             @input-value="adjustPaperWidth"
           />
@@ -89,7 +88,6 @@ const adjustMarginBottom = useDebounceFn((bottom) => {
           <InputNumber
             id="paperHeight"
             label="height"
-            addon="H"
             :value="paper.height"
             @input-value="adjustPaperHeight"
           />
@@ -97,15 +95,14 @@ const adjustMarginBottom = useDebounceFn((bottom) => {
       </div>
     </div>
   </div>
-  <div class="bg-dark text-white mx-n">
+  <div class="bg-dark mx-n">
     <div class=" p-3">
-      <h5>Block</h5>
+      <h5 class="text-white">Block</h5>
       <div class="row">
         <div class="col">
           <InputNumber
             id="blockWidth"
             label="width"
-            addon="W"
             :value="block.width"
             @input-value="adjustBlockWidth"
           />
@@ -114,7 +111,6 @@ const adjustMarginBottom = useDebounceFn((bottom) => {
           <InputNumber
             id="blockHeight"
             label="height"
-            addon="H"
             :value="block.height"
             @input-value="adjustBlockHeight"
           />

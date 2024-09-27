@@ -22,22 +22,28 @@ const margin = reactive({
   right: 0,
 });
 
-watch(() => paper.width - block.width, (gapX) => {
-  console.log(`1: {gapX: ${gapX}}`);
-  if (gapX > 0) {
-    gap.x = gapX;
-    margin.left = gapX / 2;
-    margin.right = gapX / 2;
+watch(
+  () => paper.width - block.width,
+  (gapX) => {
+    console.log(`1: {gapX: ${gapX}}`);
+    if (gapX > 0) {
+      gap.x = gapX;
+      margin.left = gapX / 2;
+      margin.right = gapX / 2;
+    }
   }
-});
-watch(() => paper.height - block.height, (gapY) => {
-  console.log(`2: {gapY: ${gapY}}`);
-  if (gapY > 0) {
-    gap.y = gapY;
-    margin.top = gapY / 2;
-    margin.bottom = gapY / 2;
+);
+watch(
+  () => paper.height - block.height,
+  (gapY) => {
+    console.log(`2: {gapY: ${gapY}}`);
+    if (gapY > 0) {
+      gap.y = gapY;
+      margin.top = gapY / 2;
+      margin.bottom = gapY / 2;
+    }
   }
-});
+);
 
 const DebounceSeconds = 250;
 const adjustPaperWidth = useDebounceFn((width) => {
